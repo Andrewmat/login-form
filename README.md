@@ -20,8 +20,14 @@ yarn build
 npx serve -s build
 ```
 
-## Behind the scenes
+## Under the hood
 
 This project was bootstraped from [create-react-app](https://github.com/facebook/create-react-app) and ejected.
+
+It uses mostly React hooks
+
+It uses Prettier to ease code styling
+
+I opted to not use Redux, since it is a simple application that did not need for a global state management library
 
 **TODO**
