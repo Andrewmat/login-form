@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.4.3",
+    "@babel/plugin-transform-react-jsx-self": "^7.2.0",
+    "@babel/plugin-transform-react-jsx-source": "^7.5.0",
+    "@reach/router": "^1.2.1",
     "@svgr/webpack": "4.1.0",
     "@typescript-eslint/eslint-plugin": "1.6.0",
     "@typescript-eslint/parser": "1.6.0",
@@ -42,6 +45,7 @@
     "postcss-normalize": "7.0.1",
     "postcss-preset-env": "6.6.0",
     "postcss-safe-parser": "4.0.1",
+    "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.1",
     "react-dev-utils": "^9.0.1",
@@ -64,7 +68,23 @@
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "prettier"
+    ],
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "useTabs": true,
+    "semi": false,
+    "singleQuote": true,
+    "quoteProps": "consistent",
+    "arrowParens": "avoid"
   },
   "browserslist": {
     "production": [
@@ -127,5 +147,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0"
   }
 }
