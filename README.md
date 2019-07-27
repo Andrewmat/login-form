@@ -22,6 +22,6 @@ npx serve -s build
 
 ## Behind the scenes
 
-This project was bootstraped from [create-react-app](https://github.com/facebook/create-react-app)
+This project was bootstraped from [create-react-app](https://github.com/facebook/create-react-app) and ejected.
 
 **TODO**
