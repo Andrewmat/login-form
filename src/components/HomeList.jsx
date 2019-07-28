@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react'
+import ptype from 'prop-types'
 import ListItems from './ListItems'
 import Input from './Input'
 
@@ -29,11 +30,23 @@ export default function HomeList(props) {
 		<div>
 			<Input
 				label="Filtrar lista"
-				type="text"
+				type="search"
 				onChange={onTermChange}
 				value={term}
 			/>
 			<ListItems list={filteredList} />
 		</div>
 	)
+}
+
+HomeList.propTypes = {
+	list: ptype.array,
+	loading: ptype.bool,
+	error: ptype.string,
+}
+
+HomeList.defaultProps = {
+	list: [],
+	loading: false,
+	error: '',
 }

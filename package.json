@@ -110,7 +110,10 @@
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
-    "setupFilesAfterEnv": [],
+    "setupFilesAfterEnv": [
+      "<rootDir>/config/jest/jest.setup.js",
+      "@testing-library/react/cleanup-after-each"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
@@ -153,6 +156,8 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.0.0",
+    "@testing-library/react": "^8.0.7",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0"
   }
