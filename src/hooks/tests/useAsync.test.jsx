@@ -36,10 +36,14 @@ describe('useAsync', () => {
 		const { result } = renderUtils
 		expect(result.current[1].pending).toBe(false)
 
-		act(() => result.current[0]())
+		act(() => {
+			result.current[0]()
+		})
 		expect(result.current[1].pending).toBe(true)
 
-		act(() => (continueAsync = true))
+		act(() => {
+			continueAsync = true
+		})
 
 		await wait(() => expect(result.current[1].result).toBe(response))
 		expect(result.current[1].pending).toBe(false)
@@ -63,10 +67,14 @@ describe('useAsync', () => {
 		const renderUtils = renderHook(() => useAsync(mockFunction))
 		const { result } = renderUtils
 		expect(result.current[1].pending).toBe(false)
-		act(() => result.current[0]())
+		act(() => {
+			result.current[0]()
+		})
 		expect(result.current[1].pending).toBe(true)
 
-		act(() => (continueAsync = true))
+		act(() => {
+			continueAsync = true
+		})
 
 		await wait(() => expect(result.current[1].error).toBe(response))
 		expect(result.current[1].pending).toBe(false)
