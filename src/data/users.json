@@ -15,8 +15,8 @@
     "permissions": ["common"]
   },
   {
-    "name": "testuser",
-    "password": "testuser",
-    "permissions": ["common"]
+    "name": "dev",
+    "password": "dev",
+    "permissions": ["common", "test"]
   }
 ]

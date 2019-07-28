@@ -8,16 +8,13 @@ export default {
 
 export async function authenticate(name, password) {
 	await delay()
-	return new Promise((resolve, reject) => {
+	try {
 		const user = userSrcData.find(
 			user => user.name === name && user.password === password,
 		)
-		if (user) {
-			const { name, permissions } = user
-			setCookie('user_p', permissions.join(','))
-			resolve({ name, permissions })
-		} else {
-			reject('Usuário ou senha inválidos')
-		}
-	})
+		setCookie('user_p', user.permissions.join(','))
+		return user
+	} catch (e) {
+		throw new Error('Usuário ou senha inválidos')
+	}
 }

@@ -16,6 +16,38 @@
     }
   },
   {
+    "id": "3",
+    "name": "Lorem Ipsum",
+    "permitLvl": "common",
+    "details": {
+      "description": "Pellentesque eleifend ornare urna ac auctor"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Dolor sit",
+    "permitLvl": "common",
+    "details": {
+      "description": "Nulla malesuada at leo ac pellentesque"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Lorem Dolor",
+    "permitLvl": "common",
+    "details": {
+      "description": "Donec bibendum nunc pharetra pulvinar interdum. Mauris ut facilisis metus"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Lorem Example",
+    "permitLvl": "common",
+    "details": {
+      "description": "Proin porta turpis at dolor molestie sollicitudin. Nullam"
+    }
+  },
+  {
     "id": "a1",
     "name": "Example Admin 1",
     "permitLvl": "admin",

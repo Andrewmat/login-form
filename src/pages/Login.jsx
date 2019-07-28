@@ -20,7 +20,7 @@ export default function Login() {
 		<LoginForm
 			onSubmit={onSubmit}
 			pending={pending}
-			error={!pending && error}
+			error={error && !pending ? error.message : undefined}
 		/>
 	)
 }

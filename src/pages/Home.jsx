@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import ListItems from '../components/ListItems'
+import HomeList from '../components/HomeList'
 import useAsync from '../hooks/useAsync'
 import { getItems as getItemsService } from '../services/ItemService'
 
@@ -14,13 +14,13 @@ export default function Home() {
 	}, [getItems, itemsReq])
 
 	return (
-		<>
-			<div>Home</div>
-			<ListItems
+		<div>
+			<h1>Home</h1>
+			<HomeList
 				loading={itemsReq.pending}
 				error={itemsReq.error}
 				list={itemsReq.result}
 			/>
-		</>
+		</div>
 	)
 }
