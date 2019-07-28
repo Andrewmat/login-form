@@ -11,11 +11,9 @@ git clone git@github.com:Andrewmat/login-form.git
 yarn install
 ```
 
-To use it in development mode, run `yarn start`
-
-To use it in production mode, run `yarn start:prod`
-
-To run tests, run `yarn test`
+* Run `yarn start:prod` and access http://localhost:5000
+* If you want to check development mode, run `yarn start` and access http://localhost:3000
+* To run the test suite, run `yarn test`
 
 ## Under the hood
 

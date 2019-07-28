@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import ptype from 'prop-types'
-import ListItems from './ListItems'
-import Input from './Input'
+import ListItems from '@Components/ListItems'
+import Input from '@Components/Input'
 
 export default function HomeList(props) {
 	const [term, setTerm] = useState('')

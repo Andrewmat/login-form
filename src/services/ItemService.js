@@ -1,6 +1,6 @@
-import { getUserPermissions } from './CookieService'
-import itemsSrcData from '../data/items.json'
-import delay from './delay'
+import { getUserPermissions } from '@Services/CookieService'
+import itemsSrcData from '@Data/items.json'
+import delay from '@Services/delay'
 
 export default {
 	getItems,

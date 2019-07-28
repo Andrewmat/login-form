@@ -1,6 +1,6 @@
-import delay from './delay'
-import { setCookie } from './CookieService'
-import userSrcData from '../data/users.json'
+import delay from '@Services/delay'
+import { setCookie } from '@Services/CookieService'
+import userSrcData from '@Data/users.json'
 
 export default {
 	authenticate,

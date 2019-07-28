@@ -1,5 +1,5 @@
 import React from 'react'
-import Item from './Item'
+import Item from '@Components/Item'
 
 export default function ListItems(props) {
 	return (

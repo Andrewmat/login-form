@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import HomeList from '../components/HomeList'
-import useAsync from '../hooks/useAsync'
-import { getItems as getItemsService } from '../services/ItemService'
+import HomeList from '@Components/HomeList'
+import useAsync from '@Hooks/useAsync'
+import { getItems as getItemsService } from '@Services/ItemService'
 
 export default function Home() {
 	const [getItems, itemsReq] = useAsync(getItemsService)

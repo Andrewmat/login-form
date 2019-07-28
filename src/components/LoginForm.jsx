@@ -1,5 +1,5 @@
 import React from 'react'
-import Input from '../components/Input'
+import Input from '@Components/Input'
 import styles from './LoginForm.module.scss'
 
 export default function(props) {
