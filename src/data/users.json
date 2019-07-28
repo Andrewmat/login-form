@@ -1,0 +1,22 @@
+[
+  {
+    "name": "admin",
+    "password": "admin",
+    "permissions": ["test", "admin", "common"]
+  },
+  {
+    "name": "test",
+    "password": "test",
+    "permissions": ["test"]
+  },
+  {
+    "name": "user",
+    "password": "user",
+    "permissions": ["common"]
+  },
+  {
+    "name": "testuser",
+    "password": "testuser",
+    "permissions": ["common"]
+  }
+]

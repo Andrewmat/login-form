@@ -5,22 +5,22 @@ import useAsync from '../hooks/useAsync'
 import { authenticate as serviceAuthenticate } from '../services/LoginService'
 
 export default function Login() {
-	const [auth, authState] = useAsync(serviceAuthenticate)
+	const [auth, { pending, result, error }] = useAsync(serviceAuthenticate)
 
 	function onSubmit({ name, password }) {
 		auth(name, password)
 	}
 	useEffect(() => {
-		if (authState.result === true) {
+		if (result && result.name && result.permissions) {
 			navigate('/home')
 		}
-	}, [authState])
+	}, [result])
 
 	return (
 		<LoginForm
 			onSubmit={onSubmit}
-			pending={authState.pending}
-			error={authState.error}
+			pending={pending}
+			error={!pending && error}
 		/>
 	)
 }

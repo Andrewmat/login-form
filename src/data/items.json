@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Example 1",
+    "permitLvl": "common",
+    "details": {
+      "description": "This is the first example for common users"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Example 2",
+    "permitLvl": "common",
+    "details": {
+      "description": "This is the second example for common users"
+    }
+  },
+  {
+    "id": "a1",
+    "name": "Example Admin 1",
+    "permitLvl": "admin",
+    "details": {
+      "description": "This is the first example for administrators"
+    }
+  },
+  {
+    "id": "a2",
+    "name": "Example Admin 2",
+    "permitLvl": "admin",
+    "details": {
+      "description": "This is the second example for administrators"
+    }
+  },
+  {
+    "id": "t1",
+    "name": "Example Test 1",
+    "permitLvl": "test",
+    "details": {
+      "description": "This is the first example of a test item"
+    }
+  },
+  {
+    "id": "t2",
+    "name": "Example Test 2",
+    "permitLvl": "test",
+    "details": {
+      "description": "This is the second example of a test item"
+    }
+  }
+]
