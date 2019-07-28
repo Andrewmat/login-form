@@ -7,7 +7,9 @@ export default function HomeList(props) {
 	const [term, setTerm] = useState('')
 	const filteredList = useMemo(
 		() =>
-			(props.list || []).filter(item => item.name.toLowerCase().includes(term)),
+			(props.list || []).filter(item =>
+				item.name.toLowerCase().includes(term.toLowerCase()),
+			),
 		[props.list, term],
 	)
 	function onTermChange(e) {

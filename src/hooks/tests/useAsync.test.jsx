@@ -1,3 +1,5 @@
 import useAsync from '../useAsync'
 
-describe('useAsync', () => {})
+describe('useAsync', () => {
+	test.todo('')
+})

@@ -13,12 +13,9 @@ yarn install
 
 To use it in development mode, run `yarn start`
 
-To use it in production mode, run:
+To use it in production mode, run `yarn start:prod`
 
-```text
-yarn build
-npx serve -s build
-```
+To run tests, run `yarn test`
 
 ## Under the hood
 

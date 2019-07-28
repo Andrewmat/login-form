@@ -1,3 +1,9 @@
 import Home from '../Home'
 
-describe('<Home />', () => {})
+jest.mock('../../services/ItemService', () => ({
+	getItems: () => [],
+}))
+
+describe('<Home />', () => {
+	test.todo('')
+})

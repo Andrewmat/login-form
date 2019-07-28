@@ -1,0 +1,16 @@
+{
+  "presets": ["react-app"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "@Components": "./src/components",
+        "@Containers": "./src/containers",
+        "@Data": "./src/data",
+        "@Hooks": "./src/hooks",
+        "@Pages": "./src/pages",
+        "@Services": "./src/services"
+      }
+    }]
+  ]
+}

@@ -1,3 +1,5 @@
 import LoadingPage from '../LoadingPage'
 
-describe('<LoadingPage />', () => {})
+describe('<LoadingPage />', () => {
+	test.todo('')
+})

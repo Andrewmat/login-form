@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, prettyDOM, cleanup, fireEvent } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import HomeList from '../HomeList'
 
 describe('<HomeList/>', () => {
@@ -32,17 +32,25 @@ describe('<HomeList/>', () => {
 
 	test('filters list by search term', () => {
 		const renderUtils = render(<HomeList list={mockList} />)
-		const renderedItems = getListItems(renderUtils)
 		const termInput = getTermInput(renderUtils)
-		expect(renderedItems).toHaveLength(3)
+
+		expect(getListItems(renderUtils)).toHaveLength(3)
 		expect(termInput).toBeInTheDocument()
 
 		fireEvent.change(termInput, { target: { value: 'lorem' } })
-		const filtered = getListItems(renderUtils)
-		expect(filtered).toHaveLength(2)
+		expect(getListItems(renderUtils)).toHaveLength(2)
 
 		fireEvent.change(termInput, { target: { value: 'lorem ipsum' } })
-		const filtered2 = getListItems(renderUtils)
-		expect(filtered2).toHaveLength(1)
+		expect(getListItems(renderUtils)).toHaveLength(1)
+
+		fireEvent.change(termInput, { target: { value: 'invalid search term' } })
+		expect(getEmptyState(renderUtils)).toBeInTheDocument()
+
+		// case insensitive
+		fireEvent.change(termInput, { target: { value: 'LOREM' } })
+		expect(getListItems(renderUtils)).toHaveLength(2)
+
+		fireEvent.change(termInput, { target: { value: 'lOReM' } })
+		expect(getListItems(renderUtils)).toHaveLength(2)
 	})
 })

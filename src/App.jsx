@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from 'react'
 import { Router } from '@reach/router'
-import Providers from './containers/Providers'
-import Login from './pages/Login'
-import LoadingPage from './pages/LoadingPage'
-const Home = lazy(() => import('./pages/Home'))
+import Providers from '@Containers/Providers'
+import Login from '@Pages/Login'
+import LoadingPage from '@Pages/LoadingPage'
+const Home = lazy(() => import('@Pages/Home'))
 
 function App() {
 	return (
