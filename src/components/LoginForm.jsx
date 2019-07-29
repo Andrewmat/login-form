@@ -20,25 +20,36 @@ export default function(props) {
 	}
 
 	return (
-		<form onSubmit={onSubmit}>
-			<Input
-				label="Username"
-				type="text"
-				onChange={onNameChange}
-				value={name}
-			/>
-			<Input
-				label="Password"
-				type="password"
-				onChange={onPasswordChange}
-				value={password}
-			/>
-			<button type="submit" disabled={props.pending}>
-				Enviar
-			</button>
-			{props.error && (
-				<span className={styles.errorMessage}>{props.error}</span>
-			)}
-		</form>
+		<div className={styles.wrapper}>
+			<h2 className={styles.title}>Login Form</h2>
+			<form onSubmit={onSubmit} className={styles.form}>
+				<div className={styles.inputWrapper}>
+					<Input
+						label="Username"
+						type="text"
+						onChange={onNameChange}
+						value={name}
+						className={styles.input}
+					/>
+					<Input
+						label="Password"
+						type="password"
+						onChange={onPasswordChange}
+						value={password}
+						className={styles.input}
+					/>
+				</div>
+				<button
+					type="submit"
+					disabled={props.pending}
+					className={styles.submit}
+				>
+					Sign In
+				</button>
+				{props.error && (
+					<span className={styles.errorMessage}>{props.error}</span>
+				)}
+			</form>
+		</div>
 	)
 }

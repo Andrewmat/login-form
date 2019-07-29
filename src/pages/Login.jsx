@@ -3,6 +3,7 @@ import { navigate } from '@reach/router'
 import LoginForm from '@Components/LoginForm'
 import useAsync from '@Hooks/useAsync'
 import { authenticate as serviceAuthenticate } from '@Services/LoginService'
+import styles from './Login.module.scss'
 
 export default function Login() {
 	const [auth, { pending, result, error }] = useAsync(serviceAuthenticate)
@@ -17,10 +18,12 @@ export default function Login() {
 	}, [result])
 
 	return (
-		<LoginForm
-			onSubmit={onSubmit}
-			pending={pending}
-			error={error && !pending ? error.message : undefined}
-		/>
+		<div className={styles.wrapper}>
+			<LoginForm
+				onSubmit={onSubmit}
+				pending={pending}
+				error={error && !pending ? error.message : undefined}
+			/>
+		</div>
 	)
 }
