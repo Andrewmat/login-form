@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react'
 import ptype from 'prop-types'
 import ListItems from '@Components/ListItems'
 import Input from '@Components/Input'
+import Loading from '@Components/Loading'
+import styles from './HomeList.module.scss'
 
 export default function HomeList(props) {
 	const [term, setTerm] = useState('')
@@ -17,24 +19,26 @@ export default function HomeList(props) {
 	}
 
 	if (props.loading) {
-		return <div>Carregando lista de items</div>
+		return <Loading />
 	}
 	if (props.error) {
 		return (
-			<div>
-				<h2>Houve um erro ao tentar carregar a lista de items</h2>
+			<div className={styles.errorWrapper}>
+				<h2>There was an error when loading the items list</h2>
 				<textarea readOnly value={props.error}></textarea>
 			</div>
 		)
 	}
 
 	return (
-		<div>
+		<div className={styles.wrapper}>
+			<h2 className={styles.title}>Items List</h2>
 			<Input
-				label="Filtrar lista"
+				label="Search"
 				type="search"
 				onChange={onTermChange}
 				value={term}
+				className={styles.searchInput}
 			/>
 			<ListItems list={filteredList} />
 		</div>

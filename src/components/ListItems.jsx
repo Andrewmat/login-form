@@ -1,22 +1,22 @@
 import React from 'react'
 import Item from '@Components/Item'
+import styles from './ListItems.module.scss'
 
 export default function ListItems(props) {
 	return (
-		<div>
-			<h2>Lista de items</h2>
-			<ul>
-				{props.list.length > 0 ? (
-					props.list.map(item => (
-						<li key={item.id}>
-							<Item {...item} />
-						</li>
-					))
-				) : (
-					<div data-testid="ListItem-EmptyState">Nenhum item encontrado</div>
-				)}
-			</ul>
-		</div>
+		<ul className={styles.wrapper}>
+			{props.list.length > 0 ? (
+				props.list.map(item => (
+					<li key={item.id}>
+						<Item {...item} />
+					</li>
+				))
+			) : (
+				<li className={styles.emptyState} data-testid="ListItem-EmptyState">
+					No items found
+				</li>
+			)}
+		</ul>
 	)
 }
 

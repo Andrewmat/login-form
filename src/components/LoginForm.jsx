@@ -44,7 +44,7 @@ export default function(props) {
 					disabled={props.pending}
 					className={styles.submit}
 				>
-					Sign In
+					{props.pending ? '...' : 'Sign In'}
 				</button>
 				{props.error && (
 					<span className={styles.errorMessage}>{props.error}</span>

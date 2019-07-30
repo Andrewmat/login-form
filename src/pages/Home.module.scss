@@ -1,0 +1,17 @@
+$accent: #6c4770;
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background-image: radial-gradient(farthest-corner, #4e2c4f, #310f32);
+}
+
+.title {
+  color: white;
+  font-family: serif;
+  font-size: 1.3em;
+  background-image: linear-gradient(to bottom, $accent, darken($accent, 10%));
+  padding: 10px 20px;
+  text-shadow: black 0px 0px 5px;
+}

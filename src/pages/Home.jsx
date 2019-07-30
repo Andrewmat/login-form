@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import HomeList from '@Components/HomeList'
 import useAsync from '@Hooks/useAsync'
 import { getItems as getItemsService } from '@Services/ItemService'
+import styles from './Home.module.scss'
 
 export default function Home() {
 	const [getItems, itemsReq] = useAsync(getItemsService)
@@ -14,11 +15,11 @@ export default function Home() {
 	}, [getItems, itemsReq])
 
 	return (
-		<div>
-			<h1>Home</h1>
+		<div className={styles.wrapper}>
+			<h1 className={styles.title}>Home</h1>
 			<HomeList
 				loading={itemsReq.pending}
-				error={itemsReq.error}
+				error={itemsReq.error && itemsReq.error.message}
 				list={itemsReq.result}
 			/>
 		</div>

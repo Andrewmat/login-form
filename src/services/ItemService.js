@@ -10,6 +10,8 @@ export default {
 export async function getItems() {
 	await delay()
 	try {
+		// unccomment the following line to check what happens in an error case
+		// throw new Error('Example error')
 		const permissions = getUserPermissions()
 		const finalItems = itemsSrcData
 			// filtering out all items that should not be acessed
