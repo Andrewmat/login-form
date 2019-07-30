@@ -9,7 +9,7 @@ describe('<HomeList/>', () => {
 		{ id: '3', name: 'ipsum dolor' },
 	]
 
-	const getTermInput = renderUtils => renderUtils.getByLabelText(/filtr/i)
+	const getTermInput = renderUtils => renderUtils.getByLabelText(/search/i)
 	const getEmptyState = renderUtils =>
 		renderUtils.getByTestId('ListItem-EmptyState')
 	const getListItems = renderUtils => renderUtils.getAllByRole('listitem')

@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import ptype from 'prop-types'
+import classnames from 'classnames'
 import ListItems from '@Components/ListItems'
 import Input from '@Components/Input'
 import Loading from '@Components/Loading'
@@ -23,7 +24,7 @@ export default function HomeList(props) {
 	}
 	if (props.error) {
 		return (
-			<div className={styles.errorWrapper}>
+			<div className={classnames(styles.errorWrapper, props.errorClassName)}>
 				<h2>There was an error when loading the items list</h2>
 				<textarea readOnly value={props.error}></textarea>
 			</div>
@@ -31,7 +32,7 @@ export default function HomeList(props) {
 	}
 
 	return (
-		<div className={styles.wrapper}>
+		<div className={classnames(styles.wrapper, props.className)}>
 			<h2 className={styles.title}>Items List</h2>
 			<Input
 				label="Search"
@@ -49,6 +50,8 @@ HomeList.propTypes = {
 	list: ptype.array,
 	loading: ptype.bool,
 	error: ptype.string,
+	className: ptype.string,
+	errorClassName: ptype.string,
 }
 
 HomeList.defaultProps = {

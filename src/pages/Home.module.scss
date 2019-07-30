@@ -1,17 +1,40 @@
 $accent: #6c4770;
 
 .wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   padding: 20px;
   background-image: radial-gradient(farthest-corner, #4e2c4f, #310f32);
+  border-radius: 4px;
 }
 
+.heading {
+  display: flex;
+  background-image: linear-gradient(to bottom, $accent, darken($accent, 10%));
+  border-radius: 4px;
+  width: 800px;
+  max-width: 100vw; 
+}
 .title {
+  flex-grow: 1;
   color: white;
   font-family: serif;
   font-size: 1.3em;
-  background-image: linear-gradient(to bottom, $accent, darken($accent, 10%));
   padding: 10px 20px;
   text-shadow: black 0px 0px 5px;
+}
+.logout {
+  background-color: white;
+  color: $accent;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  padding: 0 10px;
+}
+.list {
+  width: 800px;
+  max-width: 100vw; 
 }

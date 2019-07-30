@@ -1,5 +1,9 @@
 .wrapper {
+  display: flex;
+  flex-flow: wrap row;
+  
   & > li {
+    flex-grow: 1;
     list-style: none;
     margin: 5px 0;
   }

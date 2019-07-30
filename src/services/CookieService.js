@@ -18,16 +18,24 @@ export function getCookie(key) {
 		return key === currKey
 	})
 	if (cookie) {
-		return cookie.split('=').map(s => s.trim())
+		return cookie.split('=').map(s => s.trim())[1]
 	} else {
 		return undefined
 	}
 }
+export function removeCookie(key) {
+	const expires = new Date(Date.now() - 1000 * 60 * 60).toString()
+	setCookie(key, `;expires=${expires}`)
+}
+
+export function isLogged() {
+	return getCookie('logged') === 'true'
+}
+
 export function getUserPermissions() {
-	const cookiePermission = getCookie('user_p')
-	if (!cookiePermission) {
+	const strPermission = getCookie('user_p')
+	if (!strPermission) {
 		throw new Error(`É necessário estar logado`)
 	}
-	const [, strPermission] = cookiePermission
 	return strPermission.split(',')
 }
