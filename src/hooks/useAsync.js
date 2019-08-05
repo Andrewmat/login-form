@@ -11,7 +11,7 @@ function reducer(state, [type, payload]) {
 		case 'request':
 			return { ...state, pending: true }
 		case 'fulfill':
-			return { ...state, result: payload, pending: false }
+			return { ...state, result: payload, error: undefined, pending: false }
 		case 'reject':
 			return { ...state, error: payload, pending: false }
 		case 'cancel':
