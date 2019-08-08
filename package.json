@@ -50,10 +50,10 @@
     "postcss-preset-env": "6.6.0",
     "postcss-safe-parser": "4.0.1",
     "prettier": "^1.18.2",
-    "react": "^16.8.6",
+    "react": "^16.9.0-rc.0",
     "react-app-polyfill": "^1.0.1",
     "react-dev-utils": "^9.0.1",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.9.0-rc.0",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "semver": "6.0.0",
@@ -79,7 +79,7 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "react-test-renderer": "^16.8.6",
+    "react-test-renderer": "^16.9.0-rc.0",
     "serve": "^11.1.0"
   }
 }
